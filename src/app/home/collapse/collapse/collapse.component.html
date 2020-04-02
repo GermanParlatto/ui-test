@@ -1,0 +1,8 @@
+<div
+  *ngIf="show"
+  class="collapse"
+  [@state]="state"
+  (@state.done)="animationDone($event)"
+>
+ <ng-content #collapsableContent></ng-content>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <h2 class="title">HAVE A QUESTION? WE CAN HELP</h2>
+    <div fxLayout="column wrap" fxLayoutAlign="space-between" fx>
+        <faq-item  *ngFor="let faq of faqList | async"
+                    [faqItem]="faq"
+                    [selectedId]="currentSelection"
+                    (onSelectionChange)="onSelectionChange($event)"
+                    class="faq-item"
+                    fxFlex>
+        </faq-item>
+    </div>
+</div>

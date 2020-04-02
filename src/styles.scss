@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+$scr-light:'src/assets/fonts/oswald-light.ttf';
+$src-regular: 'src/assets/fonts/oswald-regular.ttf';
+$src-bold: 'src/assets/fonts/oswald-bold.ttf';
+
+$family: "Oswald";
+
+@mixin fontFace($family,$src,$style: normal,$weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$src}') format('truetype'); // Safari, Android, iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+@include fontFace($family,$scr-light,normal,300);
+@include fontFace($family,$src-regular,normal,400);
+@include fontFace($family,$src-bold,normal,700);
+
+body {
+	font-family: $family, sans-serif;
+	font-weight: 300;
+}

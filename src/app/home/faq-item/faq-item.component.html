@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" [ngClass]="{'selected' : isOpen() }">
+    <div fxLayout="row" fxLayoutAlign="start center">
+        <h2 class="title-item">Q{{faqItem.id}}</h2>  
+        <span class="subtitle">{{faqItem.question}}</span>
+    </div>
+    <button (click)="onClick()" class="plus-button">
+        <div class="rotate" [ngClass]="{'down' : isOpen() }"> 
+            <svg-icon src="plus-icon" [svgStyle]="{ 'width.px':30 }"></svg-icon>
+        </div> 
+    </button>
+</div>
+
+<collapse class="answer" [show]="isOpen()">
+    <p>{{faqItem.answer}}</p>
+</collapse>
