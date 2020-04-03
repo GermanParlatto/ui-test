@@ -8,7 +8,7 @@ import { AngularSvgIconModule, SvgIconRegistryService, SvgLoader } from 'angular
 import { AppComponent } from './app.component';
 import { FAQsListComponent } from './home/faqs-list/faqs-list.component';
 import { FAQItemComponent } from './home/faq-item/faq-item.component';
-import { CollapseComponent } from './home/collapse/collapse/collapse.component';
+import { CollapseComponent } from './home/collapse/collapse.component';
 import { FaqsService } from './home/share/faqs.service';
 
 @NgModule({
